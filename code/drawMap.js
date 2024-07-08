@@ -7,7 +7,7 @@ function initLeaflet() {
   // Creating map options
   var mapOptions = {
     center: [47.073, 15.441],
-    zoom: 12.5,
+    zoom: 12.3,
     wheelPxPerZoomLevel: 400,
     zoomSnap: 0.01,
     inertia: false,

@@ -164,7 +164,7 @@ let wahlberechtigte_data; //contains the number of wahlberechtigte for all elect
 
 async function fetchData() {
   try {
-    const response = await fetch("wahlen95_24.json");
+    const response = await fetch("data/wahlen95_24.json");
     if (!response.ok) {
       throw new Error("Network response was not ok " + response.statusText);
     }
@@ -173,7 +173,7 @@ async function fetchData() {
     console.error("Failed to fetch data:", error);
   }
   try {
-    const response = await fetch("wahlberechtigte.json");
+    const response = await fetch("data/wahlberechtigte.json");
     if (!response.ok) {
       throw new Error("Network response was not ok " + response.statusText);
     }

@@ -33,7 +33,7 @@ li button {
   border: none;
 
   background-color: white; /* Green */
-  font-size: 16px;
+  font-size: 14px;
   height: 100%;
 }
 
@@ -50,7 +50,8 @@ li select {
   display: block;
   text-align: center;
   padding: 10px 8px;
-  font-size: 16px;
+  font-size: 14px;
+  background-color: #e2e2e2;
 
   height: 100%;
   max-width: 100px;
@@ -74,7 +75,7 @@ li select:hover {
 }
 
 .paddingright {
-  padding-right: 40px;
+  padding-right: 30px;
 }
 
 input {
@@ -137,7 +138,7 @@ h2 {
   font-size: 16px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   #map {
     width: 100vw;
     height: 100vw;
@@ -147,13 +148,13 @@ h2 {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   #map {
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
   }
   .menu {
-    width: 800px;
+    width: 700px;
   }
 }
 #map .leaflet-tooltip-custom {
