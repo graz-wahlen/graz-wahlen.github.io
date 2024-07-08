@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Sprengelkarte" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+
+    <script src="leaflet/leaflet.js"></script>
+    <script src="sprengelkarten/sprengel24.js"></script>
+    <script src="sprengelkarten/sprengelnr19.js"></script>
+    <script src="sprengelkarten/sprengeleu19.js"></script>
+    <script src="sprengelkarten/sprengel13.js"></script>
+    <script src="sprengelkarten/sprengel09.js"></script>
+    <script src="wahlinfos.js"></script>
+    <script src="bezirksgrenzen.js"></script>
+    <script src="helper.js"></script>
+    <script src="settings.js"></script>
+    <script src="buttonHandler.js"></script>
+    <script src="drawMap.js"></script>
+    <script src="sprengelAlgorithms.js"></script>
+    <script src="drawPopup.js"></script>
+  </head>
+
+  <body>
+    <div class="menu ersteZeile">
+      <ul>
+        <li><button class="btn erster-platz">Erster Platz</button></li>
+        <li><button class="btn zweiter-platz">Zweiter Platz</button></li>
+        <li class="paddingright">
+          <button class="btn dritter-platz">Dritter Platz</button>
+        </li>
+        <li class="paddingright">
+          <button class="btn parteiergebnis">Parteiergebnis</button>
+        </li>
+        <li class="paddingright">
+          <button class="btn wahlbeteiligung">Wahlbeteiligung</button>
+        </li>
+        <li class="select-wrapper">
+          <select id="wahlauswahl"></select>
+          <i class="arrow down"></i>
+        </li>
+      </ul>
+    </div>
+    <div class="menu zweiteZeile">
+      <ul>
+        <li class="select-wrapper paddingright">
+          <select id="parteiauswahl"></select>
+          <i class="arrow down"></i>
+        </li>
+        <li><button class="btn ergebnis">Ergebnis in %</button></li>
+        <li class="paddingright">
+          <button class="btn stimmen">Anzahl Stimmen</button>
+        </li>
+        <li><button class="btn verlauf">Verlauf</button></li>
+        <li class="paddingright">
+          <button class="btn topX">
+            Top
+            <input
+              type="number"
+              id="input-topX"
+              min="10"
+              max="90"
+              step="10"
+              value="10"
+              required
+            />
+            %
+          </button>
+        </li>
+        <li>
+          <button class="btn vergleich2017">Vergleich letzte Wahl</button>
+        </li>
+      </ul>
+    </div>
+
+    <div id="map"></div>
+    <div class="menu letzteZeile">
+      <ul>
+        <li><button class="btn transparenz">Transparenz</button></li>
+        <li><button class="btn line-color">Linienfarbe</button></li>
+        <li><button class="btn bezirke-grenzen">Bezirksgrenzen</button></li>
+        <li><button class="btn hintergrund">Hintergrund</button></li>
+        <li>
+          <button class="btn sprengelnamen">Sprengelinfos</button>
+        </li>
+        <!--<li>
+          <button class="btn kleinparteien">Kleinparteien in Popups</button>
+        </li>-->
+      </ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
