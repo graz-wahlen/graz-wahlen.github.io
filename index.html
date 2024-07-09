@@ -26,19 +26,51 @@
   <body>
     <div class="menu ersteZeile">
       <ul>
-        <li><button class="btn erster-platz">Erster Platz</button></li>
-        <li><button class="btn zweiter-platz">Zweiter Platz</button></li>
-        <li class="paddingright">
-          <button class="btn dritter-platz">Dritter Platz</button>
+        <li>
+          <button
+            class="btn erster-platz"
+            title="Zeigt die stärkste Partei in allen Sprengeln an. Grau bedeutet Gleichstand mehrerer Parteien."
+          >
+            Erster Platz
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn zweiter-platz"
+            title="Zeigt die zweitstärkste Partei in allen Sprengeln an. Grau bedeutet Gleichstand mehrerer Parteien."
+          >
+            Zweiter Platz
+          </button>
         </li>
         <li class="paddingright">
-          <button class="btn parteiergebnis">Parteiergebnis</button>
+          <button
+            class="btn dritter-platz"
+            title="Zeigt die drittstärkste Partei in allen Sprengeln an. Grau bedeutet Gleichstand mehrerer Parteien."
+          >
+            Dritter Platz
+          </button>
         </li>
         <li class="paddingright">
-          <button class="btn wahlbeteiligung">Wahlbeteiligung</button>
+          <button
+            class="btn parteiergebnis"
+            title="Zeigt das Ergebnis der ausgewählten Partei mit den Einstellungen der unteren Zeile an."
+          >
+            Parteiergebnis
+          </button>
+        </li>
+        <li class="paddingright">
+          <button
+            class="btn wahlbeteiligung"
+            title="Zeigt die Wahlbeteiligung in den Sprengeln an."
+          >
+            Wahlbeteiligung
+          </button>
         </li>
         <li class="select-wrapper">
-          <select id="wahlauswahl"></select>
+          <select
+            id="wahlauswahl"
+            title="Auswahl der angezeigten Wahl."
+          ></select>
           <i class="arrow down"></i>
         </li>
       </ul>
@@ -46,16 +78,41 @@
     <div class="menu zweiteZeile">
       <ul>
         <li class="select-wrapper paddingright">
-          <select id="parteiauswahl"></select>
+          <select
+            id="parteiauswahl"
+            title="Auswahl der Partei, die beim Parteiergebnis angezeigt wird."
+          ></select>
           <i class="arrow down"></i>
         </li>
-        <li><button class="btn ergebnis">Ergebnis in %</button></li>
-        <li class="paddingright">
-          <button class="btn stimmen">Anzahl Stimmen</button>
+        <li>
+          <button
+            class="btn ergebnis"
+            title="Wahlergebnis in den Sprengeln in Prozent."
+          >
+            Ergebnis in %
+          </button>
         </li>
-        <li><button class="btn verlauf">Verlauf</button></li>
         <li class="paddingright">
-          <button class="btn topX">
+          <button
+            class="btn stimmen"
+            title="Wahlergebnis in den Sprengeln in absoluten Stimmen."
+          >
+            Anzahl Stimmen
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn verlauf"
+            title="Die Ergebnisse werden als Farbverlauf angezeigt."
+          >
+            Verlauf
+          </button>
+        </li>
+        <li class="paddingright">
+          <button
+            class="btn topX"
+            title="Die besten 10-90 Prozent einer Partei werden eingefärbt. Die Eingabe ist nur in Zehnerschritten möglich."
+          >
             Top
             <input
               type="number"
@@ -70,7 +127,12 @@
           </button>
         </li>
         <li>
-          <button class="btn vergleich2017">Vergleich letzte Wahl</button>
+          <button
+            class="btn vergleich2017"
+            title="Das Wahlergebnis der ausgewählten Wahl im Vergleich zur letzten gleichen Wahl. Zum Beispiel ew2024 - ew2019"
+          >
+            Vergleich letzte Wahl
+          </button>
         </li>
       </ul>
     </div>
@@ -78,12 +140,45 @@
     <div id="map"></div>
     <div class="menu letzteZeile">
       <ul>
-        <li><button class="btn transparenz">Transparenz</button></li>
-        <li><button class="btn line-color">Linienfarbe</button></li>
-        <li><button class="btn bezirke-grenzen">Bezirksgrenzen</button></li>
-        <li><button class="btn hintergrund">Hintergrund</button></li>
         <li>
-          <button class="btn sprengelnamen">Sprengelinfos</button>
+          <button
+            class="btn transparenz"
+            title="Ändert die Transparenz der Sprengel. [0%, 25%, 50%, 75%, 100%]"
+          >
+            Transparenz
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn line-color"
+            title="Ändert die Farbe der Bezirks- und Sprengelgrenzen. [Weiß, Schwarz, Grau, Rot, Blau, Grün]"
+          >
+            Linienfarbe
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn bezirke-grenzen"
+            title="Ändert die Sichtbarkeit der Bezirksgrenzen"
+          >
+            Bezirksgrenzen
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn hintergrund"
+            title="Ändert die Sichtbarkeit des Hintergrundes"
+          >
+            Hintergrund
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn sprengelnamen"
+            title="Ändert die Sichtbarkeit der Sprengelinformationen. [Sprengelbezeichnung, Sprengelergebnis Absolut/Relativ, Wahlbeteiligung]"
+          >
+            Sprengelinfos
+          </button>
         </li>
         <!--<li>
           <button class="btn kleinparteien">Kleinparteien in Popups</button>

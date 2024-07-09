@@ -7,7 +7,7 @@ function initLeaflet() {
   // Creating map options
   var mapOptions = {
     center: [47.073, 15.441],
-    zoom: 12.3,
+    zoom: 12.4,
     wheelPxPerZoomLevel: 400,
     zoomSnap: 0.01,
     inertia: false,
@@ -149,32 +149,6 @@ function drawTooltip() {
       map.setZoom(currentZoom);
     }, 300);*/
   }
-}
-
-function reloadTooltip() {
-  /*var styleSheet = document.styleSheets[0];
-  if (!showSprengelNamen) {
-    styleSheet.insertRule(
-      ".leaflet-tooltip-custom { display: none; }",
-      styleSheet.cssRules.length
-    );
-  } else {
-    for (var i = 0; i < styleSheet.cssRules.length; i++) {
-      if (
-        styleSheet.cssRules[i].cssText.includes(
-          ".leaflet-tooltip-custom { display: none; }"
-        )
-      ) {
-        styleSheet.deleteRule(i);
-        break;
-      }
-    }*/
-  /*var currentZoom = map.getZoom();
-  map.setZoom(currentZoom + 0.01);
-  setTimeout(function () {
-    map.setZoom(currentZoom);
-  }, 300);*/
-  //}
 }
 
 function changeTooltipContent() {

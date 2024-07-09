@@ -115,6 +115,20 @@ inputTopX.addEventListener("change", () => {
   drawButtons();
 });
 
+inputTopX.addEventListener("input", () => {
+  const value = parseInt(inputTopX.value);
+  if (isNaN(value)) {
+    return;
+  }
+  if (value % 10 == 0) {
+    if (value <= 90 && value >= 10) {
+      inputTopX.value = value;
+      drawMap();
+      drawButtons();
+    }
+  }
+});
+
 vergleich2017.addEventListener("click", () => {
   globalMode = 3;
   globalSetting = 2;
@@ -211,3 +225,5 @@ async function initAll() {
   drawSelectParty();
 }
 initAll();
+
+//TODO: math.trunc -> proper function

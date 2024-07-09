@@ -69,7 +69,6 @@ function getTopXColor(feature, party, election_name) {
   let topXsetting = 0.0;
   topXsetting = 1 - inputTopX.value / 100;
   topXsetting = topXsetting.toFixed(1);
-  console.log(topXsetting);
 
   if (globalErgebnisStimmen === 0) {
     if (
@@ -118,7 +117,6 @@ function getVergleichColor(feature, party) {
   if (globalErgebnisStimmen === 1) {
     let max_value = wahl_party_minmax[party]["stimmen"]["max"] / 2;
     let diff = spr_erg[party] - vgl_spr_erg[party];
-    console.log(max_value, diff);
 
     if (diff < 0) {
       diff = diff * -1;

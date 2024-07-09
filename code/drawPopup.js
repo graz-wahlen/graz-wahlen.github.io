@@ -127,6 +127,10 @@ function onEachFeature(feature, layer) {
 
   //---------------------------------------------
   //tooltip
+  if (showTooltipIn != "all") {
+    if (!sprengel.startsWith(showTooltipIn)) return;
+  }
+
   const partyInput = selectParteiAuswahl.value;
   const party2 = Object.keys(namen).find((key) => namen[key] === partyInput);
   let party_result = spr_erg[party2] / spr_erg["Gesamt"];

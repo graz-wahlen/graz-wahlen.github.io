@@ -6,6 +6,7 @@ const transparenzSettings = [1, 0.75, 0.5, 0.25, 0];
 let transparenzIndex = 0;
 
 let showSprengelNamen = true;
+let showTooltipIn = "all";
 
 sprengelLines = 1; //1, screenshot 4 (130% zoom)
 bezirkeLines = 4; //4, screenshot 8
