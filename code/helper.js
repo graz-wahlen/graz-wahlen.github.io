@@ -57,7 +57,7 @@ function getPartyMinmax(wahl_party_data) {
     values_ergebnis = [];
     values_stimmen = [];
     for (sprengel of Object.keys(wahl_party_data[key])) {
-      if (sprengel.startsWith("28") || sprengel.startsWith("29")) continue;
+      if (!isRealSprengel(sprengel)) continue;
       erg = Number(wahl_party_data[key][sprengel]["ergebnis"]);
       sti = Number(wahl_party_data[key][sprengel]["stimmen"]);
       if (erg == -1) continue;
@@ -94,7 +94,8 @@ function getPartyMinmax(wahl_party_data) {
       wahl_party_minmax[key]["stimmen"][factor] = values_stimmen[index];
     }
   }
-
+  console.log(wahl_party_minmax);
+  console.log(wahl_party_data);
   return wahl_party_minmax;
 }
 
@@ -193,4 +194,15 @@ function getAllParties(wahl_data) {
   }
 
   return party_list;
+}
+
+function isRealSprengel(sprengel) {
+  if (
+    sprengel.endsWith("80") ||
+    sprengel.endsWith("98") ||
+    sprengel.endsWith("99")
+  )
+    return false;
+  if (sprengel.startsWith("28") || sprengel.startsWith("29")) return false;
+  return true;
 }
